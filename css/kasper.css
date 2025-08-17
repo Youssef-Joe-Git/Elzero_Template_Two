@@ -18,4 +18,75 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
+  position: relative;
+}
+header .container {
+  padding: 40px 0;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+header .menu {
+  display: flex;
+  gap: 10px;
+}
+header .menu a {
+  color: white;
+  text-decoration: none;
+  padding: 40px 0;
+  transition: 0.3s;
+}
+header .menu a:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  z-index: 2;
+}
+
+header ::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  background: white;
+  z-index: -1;
+}
+.landing {
+  height: 100vh;
+  background-image: url("../images/landing.jpg");
+  background-size: cover;
+  background-color: black;
+}
+.landing .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.landing .content {
+  position: absolute;
+  width: 500px;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  color: white;
+  background-color: var(--transparent-color);
+  padding: 40px;
+}
+.landing .content {
+  line-height: 1.5;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
